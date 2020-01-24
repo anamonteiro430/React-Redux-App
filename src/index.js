@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
-import { reducer } from './reducers';
+import { peopleReducer } from './reducers/peopleReducer';
 import './index.css';
 import App from './App';
 
-const store = createStore(reducer, applyMiddleware(thunk, logger));
+const store = createStore(peopleReducer, applyMiddleware(thunk, logger));
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(

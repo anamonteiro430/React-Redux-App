@@ -17,6 +17,8 @@ code {
 
 img {
 	width: 250px;
+	border-radius: 50px;
+	margin-top: 5%;
 }
 
 #container {
@@ -26,11 +28,15 @@ img {
 	flex-direction: column;
 }
 
+button {
+	transition: 0.3s;
+}
+
 #card {
-	background-color: #bfbfbf;
+	background-color: white;
 	background-image: url('https://www.transparenttextures.com/patterns/blu-stripes.png');
 	min-height: 50vh;
-	width: 30%;
+	width: 100%;
 	/* Add shadows to create the "card" effect */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
@@ -38,7 +44,7 @@ img {
 }
 
 #card:hover {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
 }
 
 h1 {
@@ -46,9 +52,10 @@ h1 {
 	font-size: 3em;
 }
 
-button {
+#another {
 	width: 150px;
 	height: 150px;
+	margin-top: 2%;
 	border-radius: 50%;
 	background-image: url('./another.jpg');
 	background-size: cover;
@@ -58,4 +65,36 @@ span {
 	color: white;
 	font-size: 1.5em;
 	font-style: italic;
+}
+
+#nopes {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 20%;
+	height: 80vh;
+	width: 20%;
+}
+
+.no {
+	width: 150px;
+	height: 150px;
+	margin-top: 60%;
+	border-radius: 50%;
+	background-image: url('https://lh4.googleusercontent.com/proxy/scZNybh8JxEKbFn8O9yDLQmmMQ9qbBpMeBYHGI0fa0mYQwPfSgCZ_H5NDkU-bkw7iBZ_QYUJaXi65zvX_7icEpGALmwUicblPpFCqamBhGqp5KYp_as-K8ECjTKkOYPj');
+	background-size: cover;
+}
+
+.yes {
+	width: 150px;
+	height: 150px;
+	margin-top: 60%;
+	border-radius: 50%;
+	background-image: url('https://i.pinimg.com/originals/6b/2e/a0/6b2ea073d45cd2e14f5d8f246784287d.jpg');
+	background-size: 220px;
+}
+
+button:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
 }

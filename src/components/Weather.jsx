@@ -24,7 +24,7 @@ const Weather = props => {
 				<h3>{props.gender}</h3>
 			</div>
 			{console.log('hello from component')}
-			<button onClick={props.getWeather}></button>
+			<button id='another' onClick={props.getWeather}></button>
 			<span>Another One!</span>
 		</div>
 	);

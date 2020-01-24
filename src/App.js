@@ -1,14 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux';
 import Weather from './components/Weather';
+import Nope from './components/Nope';
+import Yup from './components/Yup';
 import './App.css';
 
-function App() {
+const mapStateToProps = state => {
+	console.log('yo', state);
+	return {
+		nope: state.nope,
+		name: state.person.name
+	};
+};
+
+function App(props) {
 	return (
 		<div className='App'>
+			<Nope />
+
 			<Weather />
+			<Yup />
 		</div>
 	);
 }
 
-export default App;
+export default connect(mapStateToProps, {})(App);
