@@ -1,0 +1,70 @@
+- add dependencies, axios, react-redux, redux-logger, redux-thunk
+- import 'create store', applymiddleware from redux in index.js, thunk from redux-thunk, logger from redux-logger
+- create store and pass reducer name, applymiddleware (thunk, logger)
+- reducers folder - create reducer.js - import everything to one file if needed
+    -set the initialState
+    -reducer
+
+- import 'reducer' from reducer file, 'provider' from 'react redux' to index.js
+- Wrap app component with the 'provider' and pass 'store' as a prop
+- Create components
+- import connect to component
+- connect component to the store
+- build maptostateprops to bring in the state
+
+const mapStateToProps = state => {
+  return {
+    isLoading: state.isLoading,
+    activity: state.activity,
+    error: state.error
+  };
+};
+        export default connect(
+  mapStateToProps,
+  {}
+)(Activity);
+
+
+- actions folder - index.js 
+    fetchSmt = () =>{
+        return dispatch=>{
+            dispatch({type: 'FETCHING'})
+            //API CALL
+        }
+    }
+
+//middleware functions
+//not needed to write
+const thunk = action => next {
+    if (typeof actionn === 'function'){
+        action(store.dispatch)
+    } else if (typeof action === 'object'){
+        next(action)
+    }
+}
+
+
+-reducer
+    -fetch data
+
+component   
+    -imort action from actions
+    -button on click props.fetchaction
+
+
+- react loader spinner
+
+axios call while in loading state
+
+- do api call in actions
+
+
+
+
+
+
+- Possible states of app
+    - initialState
+    - loading states
+    - success states
+    - error state
